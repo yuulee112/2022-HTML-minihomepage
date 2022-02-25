@@ -1,0 +1,244 @@
+  /* 메뉴 구성 */
+  .container{
+    position: absolute;
+    width: 97%;
+    height: 97%;
+    padding: 10px;
+    display: flex;
+
+    left: 8px;
+    top: 5px;
+    right: 7px;
+    bottom: 10px;
+}
+
+/* column1 */
+.column1{
+  flex: 0.4;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0px 15px 10px 0px;
+}
+.row0{
+  flex: 0.1;
+  font-size: 12px;
+  text-align: center;
+}
+
+.row1{
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+.row1a{
+  flex: 0.3;
+  /* width: 30%; */
+  margin-bottom: 10px;
+}
+
+.row1b{
+  flex: 0.8;
+  font-family: 'KyoboHand';
+  font-size: 15px;
+}
+
+.row1c{
+  flex: 0.1;
+  font-family: 'KyoboHand';
+  font-size: 18px;
+}
+
+.row1d{
+  flex: 0.1;
+  font-family: 'KyoboHand';
+  font-size: 15px;
+}
+
+/* column2 */
+.column2{
+  flex: 1;
+  
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 10px 5px;
+}
+.row2{
+  flex: 0.1;
+  display: flex;
+}
+.c1{
+  flex: 0.5;
+  font-size: 1rem;
+
+}
+.c2{
+  flex: 0.5;
+  font-size: 1rem;
+}
+
+/* 다이어리 내용 */
+.row3{
+  flex: 2;
+
+  /* width: 95%; */
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
+}
+
+.over{
+    flex:0.8;
+  }
+  .page1{
+    border: 1px solid rgb(182, 182, 182);
+    padding: 5px;
+    color:dodgerblue;
+    font-family: 'KyoboHand';
+    font-size: 15px;
+    margin-bottom: 15px;
+  }.page1 > p{
+      color: black;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'KyoboHand';
+  }
+  .row3title{
+    flex: 0.1;
+    margin-bottom: 10px;
+    width: 98%;
+    border: 1px solid rgb(182, 182, 182);
+    text-align: center;
+    padding: 5px;
+
+    display: flex;
+}
+.date{
+    flex: 0.15;
+    font-family: 'KyoboHand';
+    color: dodgerblue;
+    font-weight: bold;
+    font-size: 17px;
+    /* padding: 5px; */
+}
+.date2{
+    flex: 0.85;
+    flex-wrap: wrap;
+    display: flex;
+}.date21{
+    flex:0.05;
+    margin-right: 10px;
+    color: gray;
+    font-family: 'KyoboHand';
+    text-align: center;
+    font-size: 14px;
+}
+.redday{
+    color: red;
+}
+.blueday{
+    color: blue;
+}
+
+.row3 .over{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 390px;
+}
+
+
+.sbutton {
+    background-color: white;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-left: 150px;
+    border: none;
+  }.sbutton:hover {
+    cursor: pointer;
+    transition: 1000ms;
+    background-color: skyblue;
+    color: black;
+  }
+
+  #secret-box {
+    display: none;
+  }
+
+
+/* column3 */
+.column3{
+  flex: 0.2;
+
+  display: flex;
+  flex-direction: column;
+  margin: 50px 5px 10px 0px;
+}
+.homebtn{
+  flex: 0.08;
+  width: 80%;
+  cursor: pointer;
+}
+
+/* 기타 모양들 */
+.box{
+  background-color: white;
+  border: 1px solid #f4f1f1;
+  border-radius: 9px;
+}
+
+.cnt{
+  color: crimson;
+}
+
+.line{
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+  color: #738186;
+}
+
+.line2{
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+  color: #738186;
+  border-style: dashed;
+}
+
+.iconr{
+  display: inline-block;
+  background-color:crimson;
+  color: white;
+  padding: 1px 7px;
+  margin: 2px 0px;
+  border-radius: 3px;
+  font-size: small;
+}
+
+.iconb{
+  display: inline-block;
+  background-color:dodgerblue;
+  color: white;
+  padding: 1px 7px;
+  margin: 2px 0px;
+  border-radius: 3px;
+  font-size: small;
+}
+
+.menubox{
+  background-color: dodgerblue;
+  color: black;
+  font-family: 'KyoboHand';
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 0px 5px 5px 0px;
+}.menubox:hover { /*버튼 클릭시 */
+  background-color:#9fc5e8;
+}
+

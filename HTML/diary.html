@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2022 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="../CSS/font.css" />
+    <link rel="stylesheet" href="../CSS/layout.css" />
+    <link rel="stylesheet" href="../CSS/diary.css" />
+    <script src="https://kit.fontawesome.com/51158519ac.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+           <!-- 내부 컨테이너 -->
+          <div class="container">
+            <div class="column1">
+              <div class="row0">TODAY <span class="cnt">28</span> | TOTAL 234918</div>
+              <!-- 프로필 -->
+              <div class="row1 box">
+                <div class="row1a"><img src="../img/cat.jpg" width=190px height=150px></div>
+                <div class="row1b">고양이는 귀여워.<br> 고양이는 사랑입니다. <br>냥냥.</div>
+                <div class="row1c">@히메나</div>
+                <div class="row1d">
+                  <select name="site" onchange="window.open(value,'_blank');">
+                    <option value="https://cafe.naver.com/codeuniv">코뮤니티로 가기</option>
+                    <option value="https://codemate.kr/">코드메이트로 가기</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="column2">
+              <div class="row2">
+                <div class="c1">히메나의 미니홈피★☆</div>
+                <div class="c2">https://url주소/나중에입력</div>
+              </div>
+              <!-- 메인내용 -->
+              <div class="row3 box">
+
+                <div class="row3title">
+                    <div class="date">02.21<br>MON</div>
+                    <div class="date2">
+                        <div class="date21 redday">1</div>
+                        <div class="date21 redday">2</div>
+                        <div class="date21">3</div>
+                        <div class="date21">4</div>
+                        <div class="date21 blueday">5</div>
+                        <div class="date21 redday">6</div>
+                        <div class="date21">7</div>
+                        <div class="date21">8</div>
+                        <div class="date21">9</div>
+                        <div class="date21">10</div>
+                        <div class="date21">11</div>
+                        <div class="date21 blueday">12</div>
+                        <div class="date21 redday">13</div>
+                        <div class="date21">14</div>
+                        <div class="date21">15</div>
+                        <div class="date21">16</div>
+                        <div class="date21">17</div>
+                        <div class="date21">18</div>
+                        <div class="date21 blueday">19</div>
+                        <div class="date21 redday">20</div>
+                        <div class="date21">21</div>
+                        <div class="date21">22</div>
+                        <div class="date21">23</div>
+                        <div class="date21">24</div>
+                        <div class="date21">25</div>
+                        <div class="date21 blueday">26</div>
+                        <div class="date21 redday">27</div>
+                        <div class="date21">28</div>
+                    </div>
+                </div>
+
+      
+                <div class="over">
+                    <div class="page1">
+                        2022.02.21 월 14:28
+                        <p>고양이는 왜 귀여운 걸까?<br>세상 사람들이 다 고양이 같으면 좋겠다.<br>그럼 세상이 훨씬 귀여울테니까.</p>
+                    </div>
+                    <div class="page1">
+                        2022.02.20 일 11:30
+                        <p>2월인데 아직도 날이 춥다.<br>.<br>.<br>감기 걸리지 않게 조심해야지</p>
+                    </div>
+                    <!-- <div class="page1">
+                        2022.02.19 토 23:36
+                        <p>오늘은 기분이 좋다! <br> 그냥 좋다ㅎㅎ<br>내일도 행복했으면 좋겠다!!</p>
+                    </div> -->
+                    <div class="page1 diary-box" id="secret-box">
+                        히메나의 비밀일기
+                        <p id="secret-diary"></p>
+                    </div>
+                    <button id="button" class="sbutton" onclick="getTextFile()"><i class="fa-solid fa-lock"></i> 히메나의 비밀일기 보기</button>
+                </div>
+        
+
+              </div>
+
+            </div>
+
+            <!-- 메뉴 -->
+            <div class="column3">
+              <div class="homebtn" onClick="location.href='home.html'"><span class="menubox">홈</span></div>
+              <div class="homebtn" onClick="location.href='diary.html'"><span class="menubox">다이어리</span></div>
+              <div class="homebtn" onClick="location.href='album.html'"><span class="menubox">사진첩</span></div>
+              <div class="homebtn" onClick="location.href='guestBook.html'"><span class="menubox">방명록</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+         function getTextFile() {
+    var input = document.createElement("input");
+    input.type = "file";
+    input.accept = "text/plain";
+    input.onchange = function (event) {
+      processFile(event.target.files[0]);
+    };
+    input.click();
+  }
+
+  function processFile(file) {
+    var reader = new FileReader();
+    reader.readAsText(file, "utf-8");
+
+    reader.onload = function () {
+      document.getElementById("secret-diary").innerText = reader.result;
+      document.getElementById("secret-box").style.display = "block";
+    };
+  }
+    </script>
+  </body>
+</html>
